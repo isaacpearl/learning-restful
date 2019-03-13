@@ -4,6 +4,7 @@ const Express = require('express');
 const BodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
+const db = require('./config/db');
 
 //initialize express framework 
 var app = Express();
@@ -13,3 +14,5 @@ app.use(BodyParser.json());
 app.use(BodyParser.urlencoded({ extended: true }));
 
 app.listen(3000, () => {console.log("listening on port 3000!")});
+
+
